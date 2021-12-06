@@ -8,13 +8,13 @@ namespace Youtube
         private int _maxThreads;
         private string _location;
         private ParadeManager _parade;
-        public DownloadHandler Handler => DownloadHandler.Youtube;
+        public string Handler => "Youtube";
         public YoutubeDownloader(ParadeManager parade)
         {
 
         }
-
-        public void Download(IDownloadable downloadable)
+#nullable enable
+        public void Download(IDownloadable downloadable, string? destination)
         {
             Match urlData = Regex.Match(downloadable.Metadata.Source,
                                         RegexPatterns.Youtube,
@@ -38,7 +38,7 @@ namespace Youtube
                 else
                 if (endpoint.ToLower() == "playlist" &&
                     idType.ToLower() == "list")
-                    DownloadVideo(downloadable, id);
+                    DownloadPlaylist(downloadable, id);
                 else
                     throw new Exception("Invalid YouTube URL data.");
             }
@@ -47,6 +47,7 @@ namespace Youtube
                 // throw not match error
                 throw new Exception("Invalid YouTube URL.");
             }
+            downloadable.Metadata.Handler = this.Handler;
         }
 
         private void DownloadVideo(IDownloadable downloadable, string videoId)
@@ -62,6 +63,21 @@ namespace Youtube
         {
             Metadata metadata = downloadable.Metadata;
             return Regex.IsMatch(metadata.Source, RegexPatterns.Youtube, RegexOptions.IgnoreCase);
+        }
+
+        public void Start(IDownloadable downloadable)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Stop(IDownloadable downloadable)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Abort(IDownloadable downloadable)
+        {
+            throw new NotImplementedException();
         }
     }
 }
