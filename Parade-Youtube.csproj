@@ -4,9 +4,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
 	<SignAssembly>False</SignAssembly>
 	<AssemblyName>Youtube</AssemblyName>
+	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	<GenerateTargetAssemblyTitleAttribute >false</GenerateTargetAssemblyTitleAttribute>
+	<GenerateTargetAssemblyCompanyAttribute >false</GenerateTargetAssemblyCompanyAttribute>
+	<GenerateTargetAssemblyConfigurationAttribute >false</GenerateTargetAssemblyConfigurationAttribute>
+	<GenerateTargetAssemblyFileVersionAttribute >false</GenerateTargetAssemblyFileVersionAttribute>
+	<GenerateTargetAssemblyInformationalVersionAttribute >false</GenerateTargetAssemblyInformationalVersionAttribute>
+	<GenerateTargetAssemblyProductAttribute >false</GenerateTargetAssemblyProductAttribute>
+	<GenerateTargetAssemblyVersionAttribute >false</GenerateTargetAssemblyVersionAttribute>
   </PropertyGroup>
 
   <ItemGroup>
