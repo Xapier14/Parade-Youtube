@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Parade.csproj" />
-	  <Content Include="youtube-dl\**">
+	  <Content Include="yt-dlp\**">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
   </ItemGroup>
