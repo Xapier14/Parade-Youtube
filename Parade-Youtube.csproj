@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	<SignAssembly>False</SignAssembly>
+	<AssemblyName>Youtube</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
